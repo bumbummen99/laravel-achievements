@@ -43,6 +43,13 @@ abstract class Achievement implements CanAchieve
     public $image = '';
 
     /**
+     * The image file for this achievement.
+     *
+     * @var int
+     */
+    public $order = 0;
+
+    /**
      * The amount of points required to unlock this achievement.
      *
      * @var int
@@ -125,6 +132,7 @@ abstract class Achievement implements CanAchieve
             $model->name = $this->name;
             $model->description = $this->description;
             $model->image = $this->image;
+            $model->order = $this->order;
             $model->points = $this->points;
             $model->secret = $this->secret;
 

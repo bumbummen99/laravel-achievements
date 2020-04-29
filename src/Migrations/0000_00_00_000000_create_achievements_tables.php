@@ -36,6 +36,7 @@ class CreateAchievementsTables extends Migration
                 $table->string('name');
                 $table->string('description');
                 $table->string('image')->nullable()->default(null);
+                $table->unsignedInteger('order')->default(0);
                 $table->unsignedInteger('points')->default(1);
                 $table->boolean('secret')->default(false);
                 $table->string('class_name');

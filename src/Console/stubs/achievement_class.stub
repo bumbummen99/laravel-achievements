@@ -11,13 +11,31 @@ use SkyRaptor\Achievements\Achievement;
  */
 class DummyClass extends Achievement
 {
-    /*
-     * The achievement name
+    /**
+     * The achievement name.
+     *
+     * @var string
      */
     public $name = 'DummyClass';
 
-    /*
-     * A small description for the achievement
+    /**
+     * A small description for the achievement.
+     *
+     * @var string
      */
     public $description = '';
+
+    /**
+     * The image file for this achievement.
+     *
+     * @var string
+     */
+    public $image = '';
+
+    /**
+     * The image file for this achievement.
+     *
+     * @var int
+     */
+    public $order = 0;
 }
