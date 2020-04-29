@@ -24,28 +24,38 @@ abstract class Achievement implements CanAchieve
      */
     public $id;
 
-    /*
-     * The achievement name
+    /**
+     * The achievement name.
+     * 
+     * @var string
      */
     public $name = 'Achievement';
 
-    /*
-     * A small description for the achievement
+    /**
+     * A small description for the achievement.
+     * 
+     * @var string
      */
     public $description = '';
 
     /**
      * The amount of points required to unlock this achievement.
+     * 
+     * @var int
      */
     public $points = 1;
 
-    /*
+    /**
      * Whether this is a secret achievement or not.
+     * 
+     * @var bool
      */
     public $secret = false;
 
-    /*
+    /**
      * The model class for this achievement.
+     * 
+     * @var null|AchievementDetails
      */
     private $modelAttr = null;
 
@@ -61,6 +71,8 @@ abstract class Achievement implements CanAchieve
     /**
      * Wrapper for AchievementDetail::all();
      * Conveniently fetches all achievements stored in the database.
+     * 
+     * @return \Illuminate\Database\Eloquent\Collection|static[]
      */
     public static function all()
     {
@@ -72,7 +84,7 @@ abstract class Achievement implements CanAchieve
      *
      * @return string
      */
-    public function getClassName(): string
+    public function getClassName() : string
     {
         return static::class;
     }
@@ -82,7 +94,7 @@ abstract class Achievement implements CanAchieve
      *
      * @return int
      */
-    public function getPoints(): int
+    public function getPoints() : int
     {
         return $this->points;
     }
@@ -92,7 +104,7 @@ abstract class Achievement implements CanAchieve
      *
      * @return AchievementDetails
      */
-    public function getModel(): AchievementDetails
+    public function getModel() : AchievementDetails
     {
         if (!is_null($this->modelAttr)) {
             return $this->modelAttr;
@@ -124,8 +136,9 @@ abstract class Achievement implements CanAchieve
      *
      * @param mixed $achiever The entity that will add progress to this achievement
      * @param int $points The amount of points to be added to this achievement
+     * @return void
      */
-    public function addProgressToAchiever($achiever, $points = 1): void
+    public function addProgressToAchiever($achiever, $points = 1) : void
     {
         $progress = $this->getOrCreateProgressForAchiever($achiever);
         if (!$progress->isUnlocked()) {
@@ -139,8 +152,9 @@ abstract class Achievement implements CanAchieve
      *
      * @param mixed $achiever The entity that will add progress to this achievement
      * @param int $points The amount of points to be added to this achievement
+     * @return void
      */
-    public function setProgressToAchiever($achiever, $points): void
+    public function setProgressToAchiever($achiever, $points) : void
     {
         $progress = $this->getOrCreateProgressForAchiever($achiever);
 
@@ -156,7 +170,7 @@ abstract class Achievement implements CanAchieve
      *
      * @return AchievementProgress
      */
-    public function getOrCreateProgressForAchiever($achiever): AchievementProgress
+    public function getOrCreateProgressForAchiever($achiever) : AchievementProgress
     {
         $className = $this->getAchieverClassName($achiever);
 
@@ -183,7 +197,7 @@ abstract class Achievement implements CanAchieve
      * @param Model $achiever
      * @return string
      */
-    protected function getAchieverClassName($achiever): string
+    protected function getAchieverClassName($achiever) : string
     {
         if ($achiever instanceof Model) {
             return $achiever->getMorphClass();
@@ -199,6 +213,7 @@ abstract class Achievement implements CanAchieve
      */
     public function whenUnlocked($progress)
     {
+        //
     }
 
     /**
@@ -208,6 +223,7 @@ abstract class Achievement implements CanAchieve
      */
     public function whenProgress($progress)
     {
+        //
     }
 
     /**
@@ -215,7 +231,7 @@ abstract class Achievement implements CanAchieve
      *
      * @param $progress
      */
-    public function triggerUnlocked($progress): void
+    public function triggerUnlocked($progress) : void
     {
         event(new UnlockedEvent($progress));
         $this->whenUnlocked($progress);
@@ -226,7 +242,7 @@ abstract class Achievement implements CanAchieve
      *
      * @param $progress
      */
-    public function triggerProgress($progress): void
+    public function triggerProgress($progress) : void
     {
         event(new ProgressEvent($progress));
         $this->whenProgress($progress);
