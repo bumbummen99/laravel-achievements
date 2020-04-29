@@ -1,6 +1,7 @@
 {
     "name": "skyraptor/laravel-achievements",
     "description": "Achievement-System for Laravel",
+    "keywords": ["laravel", "achievements"],
     "license": "MIT",
     "authors": [
         {
