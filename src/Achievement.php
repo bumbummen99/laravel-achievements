@@ -124,6 +124,7 @@ abstract class Achievement implements CanAchieve
         if (config('achievements.auto_sync') || is_null($model->name)) {
             $model->name = $this->name;
             $model->description = $this->description;
+            $model->image = $this->image;
             $model->points = $this->points;
             $model->secret = $this->secret;
 
