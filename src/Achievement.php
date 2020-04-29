@@ -39,6 +39,13 @@ abstract class Achievement implements CanAchieve
     public $description = '';
 
     /**
+     * The image file for this achievement.
+     * 
+     * @var string
+     */
+    public $image = '';
+
+    /**
      * The amount of points required to unlock this achievement.
      * 
      * @var int
