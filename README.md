@@ -4,7 +4,10 @@
 
 <p align="center">
 <a href="https://travis-ci.org/bumbummen99/laravel-achievements"><img src="https://travis-ci.org/bumbummen99/laravel-achievements.svg" alt="Build Status"></a>
+<a href="https://github.styleci.io/repos/259946689"><img src="https://styleci.io/repos/259946689/shield?branch=master" alt="Code Style"></a>
 <a href="https://packagist.org/packages/skyraptor/laravel-achievements"><img src="https://poser.pugx.org/skyraptor/laravel-achievements/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/skyraptor/laravel-achievements"><img src="https://poser.pugx.org/skyraptor/laravel-achievements/v/stable" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/skyraptor/laravel-achievements"><img src="https://poser.pugx.org/skyraptor/laravel-achievements/v/unstable" alt="Latest Unstable Version"></a>
 <a href="https://packagist.org/packages/skyraptor/laravel-achievements"><img src="https://poser.pugx.org/skyraptor/laravel-achievements/license.svg" alt="License"></a>
 </p>
 
