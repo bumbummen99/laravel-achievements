@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SkyRaptor\Tests;
 
 use SkyRaptor\Tests\AchievementChains\PostChain;

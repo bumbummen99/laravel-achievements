@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace SkyRaptor\Tests\Model;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
