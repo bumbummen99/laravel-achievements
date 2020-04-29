@@ -35,6 +35,10 @@ Default installation is via [Composer](https://getcomposer.org/). The service pr
 ```bash
 composer require skyraptor/laravel-achievements
 ```
+You can publish the configuration of this package with the following command.
+```bash
+php artisan vendor:publish --provider="SkyRaptor\Achievements\AchievementsServiceProvider" --tag="config"
+```
 
 Backup your database and run the migrations in order to setup the required tables on the database.
 
