@@ -30,20 +30,10 @@ An implementation of an Achievement System in Laravel, inspired by Laravel's Not
 
 ## <a name="installation"></a> Installation
 
-Default installation is via [Composer](https://getcomposer.org/).
+Default installation is via [Composer](https://getcomposer.org/). The service provider will automatically get registered.
 
 ```bash
 composer require skyraptor/laravel-achievements
-```
-
-The service provider will automatically get registered. Or you could add the Service Provider manually to your
-`config/app` file in the `providers` section.
-
-```php
-'providers' => [
-    //...
-    SkyRaptor\Achievements\AchievementsServiceProvider::class,
-]
 ```
 
 Backup your database and run the migrations in order to setup the required tables on the database.
