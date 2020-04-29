@@ -169,4 +169,14 @@ class AchievementProgress extends Model
     {
         return $this->details->description;
     }
+
+    /**
+     * Maps to SkyRaptor\Achievements\Achievement::$description.
+     *
+     * @return string
+     */
+    public function getImageAttribute(): string
+    {
+        return $this->details->image;
+    }
 }
