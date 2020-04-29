@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements;
+namespace SkyRaptor\Achievements;
 
 /**
  * Interface CanAchieve
  *
- * @package Assada\Achievements
+ * @package SkyRaptor\Achievements
  */
 interface CanAchieve
 {

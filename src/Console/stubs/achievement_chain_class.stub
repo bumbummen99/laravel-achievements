@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace DummyNamespace;
 
-use Assada\Achievements\AchievementChain;
+use SkyRaptor\Achievements\AchievementChain;
 
 /**
  * Class Registered

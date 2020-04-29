@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Tests\Achievements;
+namespace SkyRaptor\Tests\Achievements;
 
-use Assada\Achievements\Achievement;
+use SkyRaptor\Achievements\Achievement;
 
 /**
  * Class TenPosts
  *
- * @package Assada\Tests\Achievements
+ * @package SkyRaptor\Tests\Achievements
  */
 class TenPosts extends Achievement
 {

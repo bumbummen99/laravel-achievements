@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements\Event;
+namespace SkyRaptor\Achievements\Event;
 
-use Assada\Achievements\Model\AchievementProgress;
+use SkyRaptor\Achievements\Model\AchievementProgress;
 use Illuminate\Queue\SerializesModels;
 
 /**
  * Class Progress
  *
- * @package Assada\Achievements\Event
+ * @package SkyRaptor\Achievements\Event
  */
 class Progress
 {

@@ -1,19 +1,19 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Tests;
+namespace SkyRaptor\Tests;
 
-use Assada\Achievements\Achievement;
-use Assada\Achievements\Model\AchievementDetails;
-use Assada\Tests\Model\User;
-use Assada\Tests\Achievements\FirstPost;
-use Assada\Tests\Achievements\TenPosts;
+use SkyRaptor\Achievements\Achievement;
+use SkyRaptor\Achievements\Model\AchievementDetails;
+use SkyRaptor\Tests\Model\User;
+use SkyRaptor\Tests\Achievements\FirstPost;
+use SkyRaptor\Tests\Achievements\TenPosts;
 use Illuminate\Database\Eloquent\Relations\Relation;
 
 /**
  * Class AchievementTest
  *
- * @package Assada\Tests
+ * @package SkyRaptor\Tests
  */
 class AchievementTest extends DBTestCase
 {

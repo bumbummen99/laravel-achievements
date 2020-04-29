@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Tests\Model;
+namespace SkyRaptor\Tests\Model;
 
-use Assada\Achievements\Achiever;
+use SkyRaptor\Achievements\Achiever;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * Class User
  *
- * @package Assada\Tests\Model
+ * @package SkyRaptor\Tests\Model
  */
 class User extends Authenticatable
 {

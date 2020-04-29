@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements;
+namespace SkyRaptor\Achievements;
 
 /**
  * Trait Achiever
  *
- * @package Assada\Achievements
+ * @package SkyRaptor\Achievements
  */
 trait Achiever
 {

@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements;
+namespace SkyRaptor\Achievements;
 
-use Assada\Achievements\Model\AchievementDetails;
-use Assada\Achievements\Model\AchievementProgress;
+use SkyRaptor\Achievements\Model\AchievementDetails;
+use SkyRaptor\Achievements\Model\AchievementProgress;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 /**
  * Trait EntityRelationsAchievements
  *
- * @package Assada\Achievements
+ * @package SkyRaptor\Achievements
  */
 trait EntityRelationsAchievements
 {

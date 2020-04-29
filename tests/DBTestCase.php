@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Tests;
+namespace SkyRaptor\Tests;
 
 use Illuminate\Foundation\Testing\TestCase;
 use Illuminate\Support\Facades\Artisan;
-use Assada\Tests\Model\User;
-use Assada\Achievements\AchievementsServiceProvider;
+use SkyRaptor\Tests\Model\User;
+use SkyRaptor\Achievements\AchievementsServiceProvider;
 
 /**
  * Class DBTestCase
  *
- * @package Assada\Tests
+ * @package SkyRaptor\Tests
  */
 class DBTestCase extends TestCase
 {

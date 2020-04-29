@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Tests\AchievementChains;
+namespace SkyRaptor\Tests\AchievementChains;
 
-use Assada\Achievements\AchievementChain;
-use Assada\Tests\Achievements\FiftyPosts;
-use Assada\Tests\Achievements\FirstPost;
-use Assada\Tests\Achievements\TenPosts;
+use SkyRaptor\Achievements\AchievementChain;
+use SkyRaptor\Tests\Achievements\FiftyPosts;
+use SkyRaptor\Tests\Achievements\FirstPost;
+use SkyRaptor\Tests\Achievements\TenPosts;
 
 /**
  * Class PostChain
  *
- * @package Assada\Tests\AchievementChains
+ * @package SkyRaptor\Tests\AchievementChains
  */
 class PostChain extends AchievementChain
 {

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements\Model;
+namespace SkyRaptor\Achievements\Model;
 
 use Carbon\Carbon;
 use Exception;
-use Assada\Achievements\Achievement;
+use SkyRaptor\Achievements\Achievement;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -16,7 +16,7 @@ use Ramsey\Uuid\Uuid;
  * Model for the table that will store the data regarding achievement progress and unlocks.
  *
  * @category Model
- * @package  Assada\Achievements\Model
+ * @package  SkyRaptor\Achievements\Model
  * @author   Gabriel Simonetti <simonettigo@gmail.com>
  * @license  MIT License
  * @link     https://github.com/assada/laravel-achievements
@@ -148,7 +148,7 @@ class AchievementProgress extends Model
     }
 
     /**
-     * Maps to Assada\Achievements\Achievement::$name
+     * Maps to SkyRaptor\Achievements\Achievement::$name
      *
      * @return string
      */
@@ -158,7 +158,7 @@ class AchievementProgress extends Model
     }
 
     /**
-     * Maps to Assada\Achievements\Achievement::$description
+     * Maps to SkyRaptor\Achievements\Achievement::$description
      *
      * @return string
      */

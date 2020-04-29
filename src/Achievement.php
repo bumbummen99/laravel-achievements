@@ -1,18 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements;
+namespace SkyRaptor\Achievements;
 
-use Assada\Achievements\Event\Progress as ProgressEvent;
-use Assada\Achievements\Event\Unlocked as UnlockedEvent;
-use Assada\Achievements\Model\AchievementDetails;
-use Assada\Achievements\Model\AchievementProgress;
+use SkyRaptor\Achievements\Event\Progress as ProgressEvent;
+use SkyRaptor\Achievements\Event\Unlocked as UnlockedEvent;
+use SkyRaptor\Achievements\Model\AchievementDetails;
+use SkyRaptor\Achievements\Model\AchievementProgress;
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Achievement
  *
- * @package Assada\Achievements
+ * @package SkyRaptor\Achievements
  */
 abstract class Achievement implements CanAchieve
 {

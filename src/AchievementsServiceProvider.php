@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements;
+namespace SkyRaptor\Achievements;
 
-use Assada\Achievements\Console\AchievementChainMakeCommand;
-use Assada\Achievements\Console\AchievementMakeCommand;
-use Assada\Achievements\Console\LoadAchievementsCommand;
+use SkyRaptor\Achievements\Console\AchievementChainMakeCommand;
+use SkyRaptor\Achievements\Console\AchievementMakeCommand;
+use SkyRaptor\Achievements\Console\LoadAchievementsCommand;
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class AchievementsServiceProvider
  *
- * @package Assada\Achievements
+ * @package SkyRaptor\Achievements
  */
 class AchievementsServiceProvider extends ServiceProvider
 {

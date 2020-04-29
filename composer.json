@@ -1,6 +1,6 @@
 {
-    "name": "assada/laravel-achievements",
-    "description": "Achievements for Laravel 6+",
+    "name": "skyraptor/laravel-achievements",
+    "description": "Achievement-System for Laravel",
     "license": "MIT",
     "authors": [
         {
@@ -8,8 +8,8 @@
             "email": "simonettigo@gmail.com"
         },
         {
-            "name": "Alex Ilyenko",
-            "email": "assada.ua@gmail.com"
+            "name": "Patrick Henninger",
+            "email": "privat@skyraptor.eu"
         }
     ],
     "autoload": {
@@ -17,14 +17,18 @@
             "src/Migrations"
         ],
         "psr-4": {
-            "Assada\\Achievements\\": "src/",
-            "Assada\\Tests\\": "tests/"
+            "SkyRaptor\\Achievements\\": "src/"            
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SkyRaptor\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Assada\\Achievements\\AchievementsServiceProvider"
+                "SkyRaptor\\Achievements\\AchievementsServiceProvider"
             ]
         }
     },

@@ -8,7 +8,7 @@
 <a href="https://packagist.org/packages/assada/laravel-achievements"><img src="https://poser.pugx.org/assada/laravel-achievements/license.svg" alt="License"></a>
 </p>
 
-An implementation of an Achievement System in Laravel, inspired by Laravel's Notification system.
+An implementation of an Achievement System in Laravel, inspired by Laravel's Notification system. This is a fork and continuation of [Gabriel Simonetti's](https://github.com/gabriel-simonetti) [Laravel Achievements](https://github.com/gstt/laravel-achievements) package.
 
 ## Table of Contents
 1. [Requirements](#requirements)
@@ -26,10 +26,6 @@ An implementation of an Achievement System in Laravel, inspired by Laravel's Not
 - Laravel 6 or higher
 - PHP 7.2 or higher
 
-## Versions and branches
-- v1.* - Original `Gstt\*` namespace with supporting Laravel 6 and PHP7.2 (only fix and security updates)
-- v2.* (master) - New namespace `Assada\*` with supporting Laravel 6 and PHP7.2 (fixes, security and feature updates)
-
 ## <a name="installation"></a> Installation
 
 Default installation is via [Composer](https://getcomposer.org/).
@@ -44,7 +40,7 @@ The service provider will automatically get registered. Or you could add the Ser
 ```php
 'providers' => [
     //...
-    Assada\Achievements\AchievementsServiceProvider::class,
+    SkyRaptor\Achievements\AchievementsServiceProvider::class,
 ]
 ```
 
@@ -71,7 +67,7 @@ what the Achievement is and how to unlock it. When you're done, it should look l
 
 namespace App\Achievements;
 
-use Assada\Achievements\Achievement;
+use SkyRaptor\Achievements\Achievement;
 
 class UserMadeAPost extends Achievement
 {
@@ -95,7 +91,7 @@ Achievements can be unlocked by using the `Achiever` trait.
 
 namespace App;
 
-use Assada\Achievements\Achiever;
+use SkyRaptor\Achievements\Achiever;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -126,7 +122,7 @@ In order to do that, you must set an additional parameter on your `UserMade10Pos
 
 namespace App\Achievements;
 
-use Assada\Achievements\Achievement;
+use SkyRaptor\Achievements\Achievement;
 
 class UserMade10Posts extends Achievement
 {
@@ -199,7 +195,7 @@ There are also three additional helpers on the `Achiever` trait: `lockedAchievem
 ### Listening to all Achievements
 Laravel Achievements provides two events that can be listened to in order to provide "Achievement Unlocked" messages or similar. Both events receive the instance of `AchievementProgress` that triggered them.
 
-The `Assada\Achievements\Event\Progress` event triggers whenever an Achiever makes progress, but doesn't unlock an Achievement. The `Assada\Achievements\Event\Unlocked` event triggers whenever an Achiever actually unlocks an achievement.
+The `SkyRaptor\Achievements\Event\Progress` event triggers whenever an Achiever makes progress, but doesn't unlock an Achievement. The `SkyRaptor\Achievements\Event\Unlocked` event triggers whenever an Achiever actually unlocks an achievement.
 
 Details on how to listen to those events are explained on [Laravel's Event documentation](https://laravel.com/docs/5.3/events).
 
@@ -212,7 +208,7 @@ The event listeners mentioned above triggers for all Achievements. If you would 
 
 namespace App\Achievements;
 
-use Assada\Achievements\Achievement;
+use SkyRaptor\Achievements\Achievement;
 
 class UserMade50Posts extends Achievement
 {

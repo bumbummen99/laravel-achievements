@@ -1,18 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Tests;
+namespace SkyRaptor\Tests;
 
-use Assada\Tests\AchievementChains\PostChain;
-use Assada\Tests\Achievements\FiftyPosts;
-use Assada\Tests\Achievements\FirstPost;
-use Assada\Tests\Achievements\TenPosts;
-use Assada\Tests\Model\User;
+use SkyRaptor\Tests\AchievementChains\PostChain;
+use SkyRaptor\Tests\Achievements\FiftyPosts;
+use SkyRaptor\Tests\Achievements\FirstPost;
+use SkyRaptor\Tests\Achievements\TenPosts;
+use SkyRaptor\Tests\Model\User;
 
 /**
  * Class ChainAchievementTest
  *
- * @package Assada\Tests
+ * @package SkyRaptor\Tests
  */
 class ChainAchievementTest extends DBTestCase
 {

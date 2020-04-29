@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements;
+namespace SkyRaptor\Achievements;
 
-use Assada\Achievements\Model\AchievementProgress;
+use SkyRaptor\Achievements\Model\AchievementProgress;
 
 /**
  * Trait RoutesAchievements
  *
- * @package Assada\Achievements
+ * @package SkyRaptor\Achievements
  */
 trait RoutesAchievements
 {

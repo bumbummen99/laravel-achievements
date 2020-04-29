@@ -196,12 +196,12 @@
                                 <pre class="brush: php;">
 'providers' => [
     ...
-    Assada\Achievements\AchievementsServiceProvider::class,
+    SkyRaptor\Achievements\AchievementsServiceProvider::class,
                                 </pre>
                                 <p style="padding-bottom: 0;">3) Run the artisan publish command in order to get the
                                     migrations and config files set up in your system.
                                 </p>
-                                <pre>php artisan vendor:publish --provider="Assada\Achievements\AchievementsServiceProvider"</pre>
+                                <pre>php artisan vendor:publish --provider="SkyRaptor\Achievements\AchievementsServiceProvider"</pre>
                                 <p style="padding-bottom: 0;">4) Backup your database and run the migrations in order
                                     to install all tables required by Laravel Achievements.
                                 </p>
@@ -248,7 +248,7 @@
                         <pre class="brush: php; highlight: [8]">
 namespace App;
 
-use Assada\Achievements\Achiever;
+use SkyRaptor\Achievements\Achiever;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -280,7 +280,7 @@ class User extends Authenticatable
                         <pre class="brush:php;">
 namespace App\Achievements;
 
-use Assada\Achievements\Achievement;
+use SkyRaptor\Achievements\Achievement;
 
 class CreatedFirstComment extends Achievement
 {
@@ -354,7 +354,7 @@ class CommentsController extends Controller
                         <pre class="brush:php; highlight:[26]">
 namespace App\Achievements;
 
-use Assada\Achievements\Achievement;
+use SkyRaptor\Achievements\Achievement;
 
 class CreatedTenComments extends Achievement
 {
@@ -423,7 +423,7 @@ class CommentsController extends Controller
                         <pre class="brush:php; highlight:[5]">
 namespace App\Achievements;
 
-use Assada\Achievements\Achievement;
+use SkyRaptor\Achievements\Achievement;
 
 class CreatedCommentWith100Characters extends Achievement
 {
@@ -436,7 +436,7 @@ class CreatedCommentWith100Characters extends Achievement
                         <pre class="brush:php; highlight:[5]">
 namespace App\Achievements;
 
-use Assada\Achievements\Achievement;
+use SkyRaptor\Achievements\Achievement;
 
 class Commented1000Characters extends Achievement
 {
@@ -449,7 +449,7 @@ class Commented1000Characters extends Achievement
                         <pre class="brush:php; highlight:[5]">
 namespace App\Achievements;
 
-use Assada\Achievements\Achievement;
+use SkyRaptor\Achievements\Achievement;
 
 class CreatedFiveConsecutiveCommentsWithOver100Characters extends Achievement
 {
@@ -520,7 +520,7 @@ $details = $user->achievementStatus(new CreatedTenComments());
                             <code>unlockedAchievements()</code>.
                         </p>
                         <p>In order to retrieve all achievements, you can use the static method
-                            <code>Assada\Achievements\Achievement::all()</code>.</p>
+                            <code>SkyRaptor\Achievements\Achievement::all()</code>.</p>
 
                     </section>
                     <!-- end section -->
@@ -566,7 +566,7 @@ use App\Achievements\FirstPost;
 use App\Achievements\TenPosts;
 use App\Achievements\FiftyPosts;
 
-use Assada\Achievements\AchievementChain;
+use SkyRaptor\Achievements\AchievementChain;
 
 class CommentChain extends AchievementChain
 {
@@ -619,8 +619,8 @@ class CommentsController extends Controller
                         <hr>
                         <h4 id="line4_2">Available Events</h4>
                         <ul>
-                            <li><code>Assada\Achievements\Event\Progress</code>: Triggers whenever an Achiever has their progress points in an Achievement changed.</li>
-                            <li><code>Assada\Achievements\Event\Unlocked</code>: Triggers whenever an Achiever has unlocked an Achievement.</li>
+                            <li><code>SkyRaptor\Achievements\Event\Progress</code>: Triggers whenever an Achiever has their progress points in an Achievement changed.</li>
+                            <li><code>SkyRaptor\Achievements\Event\Unlocked</code>: Triggers whenever an Achiever has unlocked an Achievement.</li>
                         </ul>
                         <hr>
                         <h4 id="line4_3">Listening to Events</h4>
@@ -629,7 +629,7 @@ class CommentsController extends Controller
                         <h4 id="line4_4">Specific Achievement Events</h4>
                         <p>The event listeners mentioned above triggers for all Achievements. If you would like to add an event listener for only a specific Achievement, you can do so by implementing the methods <code>whenUnlocked()</code> or <code>whenProgress</code> on the Achievement class.</p>
                         <pre class="brush:php; highlight:[23,32]">
-use Assada\Achievements\Achievement;
+use SkyRaptor\Achievements\Achievement;
 
 class UserMade50Posts extends Achievement
 {
@@ -703,11 +703,11 @@ class UserMade50Posts extends Achievement
                         <h4 id="line6_2">Achiever</h4>
                         <p style="padding-bottom: 0;">An <strong>Achiever</strong> is any Eloquent Model within your
                             system that is able to unlock and progress in Achievements. You can define that a Model is
-                            an Achiever by including the <code>Assada\Achievements\Achiever</code> trait to that model.</p>
+                            an Achiever by including the <code>SkyRaptor\Achievements\Achiever</code> trait to that model.</p>
                         <pre class="brush: php; highlight: [8]">
 namespace App;
 
-use Assada\Achievements\Achiever;
+use SkyRaptor\Achievements\Achiever;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -720,7 +720,7 @@ class User extends Authenticatable
                         <hr>
                         <h4 id="line6_3">Achievement</h4>
                         <p>An <strong>Achievement</strong> is a class that extends from the
-                            <code>Assada\Achievements\Achievement</code> class and describes what the Achievement is.
+                            <code>SkyRaptor\Achievements\Achievement</code> class and describes what the Achievement is.
                             It's designed to be implemented in a similar way to the
                             <a href="https://laravel.com/docs/5.6/notifications" target="_blank">Laravel Notifications</a>
                             package - for every Achievement you use in your system, you will need to declare a class for it.
@@ -729,7 +729,7 @@ class User extends Authenticatable
                         <pre class="brush: php;">
 namespace App\Achievements;
 
-use Assada\Achievements\Achievement;
+use SkyRaptor\Achievements\Achievement;
 
 class UserMadeAPost extends Achievement
 {
@@ -802,7 +802,7 @@ class UserMadeAPost extends Achievement
 
                         <hr>
                         <h4 id="line6_6">Chain</h4>
-                        <p>A <strong>Chain</strong> is a class that extends from <code>Assada\Achievements\AchievementChain</code>
+                        <p>A <strong>Chain</strong> is a class that extends from <code>SkyRaptor\Achievements\AchievementChain</code>
                             and defines a sequence of <code>Achievements</code> that are tracking the same thing.</p>
                         <p>A <strong>Chain</strong> looks like this:</p>
                         <pre class="brush: php;">
@@ -812,7 +812,7 @@ use App\Achievements\FirstPost;
 use App\Achievements\TenPosts;
 use App\Achievements\FiftyPosts;
 
-use Assada\Achievements\AchievementChain;
+use SkyRaptor\Achievements\AchievementChain;
 
 class PostChain extends AchievementChain
 {

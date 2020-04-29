@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Assada\Achievements\Model;
+namespace SkyRaptor\Achievements\Model;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Config;
  * Model for the table that will store the details for an Achievement Progress.
  *
  * @category Model
- * @package  Assada\Achievements\Model
+ * @package  SkyRaptor\Achievements\Model
  * @author   Gabriel Simonetti <simonettigo@gmail.com>
  * @license  MIT License
  * @link     https://github.com/assada/laravel-achievements
