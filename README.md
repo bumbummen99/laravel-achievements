@@ -33,7 +33,7 @@ An implementation of an Achievement System in Laravel, inspired by Laravel's Not
 Default installation is via [Composer](https://getcomposer.org/).
 
 ```bash
-composer require assada/laravel-achievements
+composer require skyraptor/laravel-achievements
 ```
 
 The service provider will automatically get registered. Or you could add the Service Provider manually to your
