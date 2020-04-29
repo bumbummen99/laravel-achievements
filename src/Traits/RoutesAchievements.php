@@ -1,9 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace SkyRaptor\Achievements;
+namespace SkyRaptor\Achievements\Traits;
 
+use SkyRaptor\Achievements\Contracts\CanAchieve;
 use SkyRaptor\Achievements\Model\AchievementProgress;
+use SkyRaptor\Achievements\Achievement;
+use SkyRaptor\Achievements\AchievementChain;
 
 /**
  * Trait RoutesAchievements

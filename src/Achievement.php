@@ -7,6 +7,7 @@ use SkyRaptor\Achievements\Event\Progress as ProgressEvent;
 use SkyRaptor\Achievements\Event\Unlocked as UnlockedEvent;
 use SkyRaptor\Achievements\Model\AchievementDetails;
 use SkyRaptor\Achievements\Model\AchievementProgress;
+use SkyRaptor\Achievements\Contracts\CanAchieve;
 use Illuminate\Database\Eloquent\Model;
 
 /**

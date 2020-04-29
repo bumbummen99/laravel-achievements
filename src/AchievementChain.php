@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace SkyRaptor\Achievements;
 
+use SkyRaptor\Achievements\Contracts\CanAchieve;
 use SkyRaptor\Achievements\Model\AchievementProgress;
 
 /**

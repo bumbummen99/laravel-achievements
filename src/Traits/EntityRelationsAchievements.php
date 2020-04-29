@@ -1,10 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace SkyRaptor\Achievements;
+namespace SkyRaptor\Achievements\Traits;
 
 use SkyRaptor\Achievements\Model\AchievementDetails;
 use SkyRaptor\Achievements\Model\AchievementProgress;
+use SkyRaptor\Achievements\Achievement;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 

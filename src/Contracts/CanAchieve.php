@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace SkyRaptor\Achievements;
+namespace SkyRaptor\Achievements\Contracts;
 
 /**
  * Interface CanAchieve
