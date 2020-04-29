@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-<a href="https://travis-ci.org/assada/laravel-achievements"><img src="https://travis-ci.org/assada/laravel-achievements.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/assada/laravel-achievements"><img src="https://poser.pugx.org/assada/laravel-achievements/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/assada/laravel-achievements"><img src="https://poser.pugx.org/assada/laravel-achievements/license.svg" alt="License"></a>
+<a href="https://travis-ci.org/bumbummen99/laravel-achievements"><img src="https://travis-ci.org/bumbummen99/laravel-achievements.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/skyraptor/laravel-achievements"><img src="https://poser.pugx.org/skyraptor/laravel-achievements/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/skyraptor/laravel-achievements"><img src="https://poser.pugx.org/skyraptor/laravel-achievements/license.svg" alt="License"></a>
 </p>
 
 An implementation of an Achievement System in Laravel, inspired by Laravel's Notification system. This is a fork and continuation of [Gabriel Simonetti's](https://github.com/gabriel-simonetti) [Laravel Achievements](https://github.com/gstt/laravel-achievements) package.
@@ -18,7 +18,6 @@ An implementation of an Achievement System in Laravel, inspired by Laravel's Not
 5. [Adding Progress](#progress)
 6. [Retrieving Achievements](#retrieving)
 7. [Event Listeners](#listening)
-8. [License](#license)
 
 
 ## <a name="requirements"></a> Requirements
@@ -244,6 +243,3 @@ class UserMade50Posts extends Achievement
     }
 }
 ```
-## <a name="license"></a> License
-
-Laravel Achievements is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
