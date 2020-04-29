@@ -1,17 +1,16 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Achievements\Console;
 
-use SkyRaptor\Achievements\Achievement;
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Support\Str;
+use SkyRaptor\Achievements\Achievement;
 
 /**
- * Class LoadAchievements
- *
- * @package SkyRaptor\Achievements\Console
+ * Class LoadAchievements.
  */
 class LoadAchievementsCommand extends Command
 {
@@ -47,7 +46,7 @@ class LoadAchievementsCommand extends Command
 
         if (empty($paths)) {
             $paths = [
-                'app/Achievements'
+                'app/Achievements',
             ];
         }
 
@@ -56,7 +55,7 @@ class LoadAchievementsCommand extends Command
         foreach ($paths as $path) {
             $this->info(sprintf('Load classes in %s...', $path));
 
-            $files = array_diff(scandir($path, SCANDIR_SORT_ASCENDING), array('.', '..'));
+            $files = array_diff(scandir($path, SCANDIR_SORT_ASCENDING), ['.', '..']);
 
             foreach ($files as $file) {
                 if (!Str::endsWith($file, '.php')) {
@@ -65,8 +64,8 @@ class LoadAchievementsCommand extends Command
                 }
 
                 $classes[] = [
-                    'name' => Str::before($file, '.php'),
-                    'namespace' => $this->getNamespace(file_get_contents($path . '/' . $file))
+                    'name'      => Str::before($file, '.php'),
+                    'namespace' => $this->getNamespace(file_get_contents($path.'/'.$file)),
                 ];
             }
 
@@ -78,7 +77,7 @@ class LoadAchievementsCommand extends Command
 
         foreach ($classes as $class) {
             $fullClass = sprintf('%s\%s', $class['namespace'], $class['name']);
-            $objects[] = new $fullClass;
+            $objects[] = new $fullClass();
         }
 
         $this->info(sprintf('Created %d objects. Migrating...', count($objects)));
@@ -98,6 +97,7 @@ class LoadAchievementsCommand extends Command
 
     /**
      * @param $src
+     *
      * @return string|null
      */
     private function getNamespace($src): ?string
@@ -105,6 +105,7 @@ class LoadAchievementsCommand extends Command
         if (preg_match('#^namespace\s+(.+?);$#sm', $src, $m)) {
             return $m[1];
         }
+
         return null;
     }
 }

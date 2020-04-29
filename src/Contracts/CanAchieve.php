@@ -1,12 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Achievements\Contracts;
 
 /**
- * Interface CanAchieve
- *
- * @package SkyRaptor\Achievements
+ * Interface CanAchieve.
  */
 interface CanAchieve
 {

@@ -1,23 +1,22 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Achievements\Traits;
 
-use SkyRaptor\Achievements\Model\AchievementDetails;
-use SkyRaptor\Achievements\Model\AchievementProgress;
-use SkyRaptor\Achievements\Achievement;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use SkyRaptor\Achievements\Achievement;
+use SkyRaptor\Achievements\Model\AchievementDetails;
+use SkyRaptor\Achievements\Model\AchievementProgress;
 
 /**
- * Trait EntityRelationsAchievements
- *
- * @package SkyRaptor\Achievements
+ * Trait EntityRelationsAchievements.
  */
 trait EntityRelationsAchievements
 {
     /**
-     * Get the entity's Achievements
+     * Get the entity's Achievements.
      *
      * @return MorphMany
      */
@@ -26,13 +25,16 @@ trait EntityRelationsAchievements
         if (config('achievements.locked_sync')) {
             $this->syncAchievements();
         }
+
         return $this->morphMany(AchievementProgress::class, 'achiever')
             ->orderBy('updated_at', 'desc');
     }
 
     /**
-     * Retrieves the status for the specified achievement
+     * Retrieves the status for the specified achievement.
+     *
      * @param Achievement $achievement
+     *
      * @return null|AchievementProgress
      */
     public function achievementStatus(Achievement $achievement): ?AchievementProgress
@@ -42,7 +44,9 @@ trait EntityRelationsAchievements
 
     /**
      * Return true if the user has unlocked this achievement, false otherwise.
+     *
      * @param Achievement $achievement
+     *
      * @return bool
      */
     public function hasUnlocked(Achievement $achievement): bool
@@ -84,6 +88,7 @@ trait EntityRelationsAchievements
 
     /**
      * Get the entity's locked achievements.
+     *
      * @return Collection
      */
     public function lockedAchievements(): Collection
@@ -102,6 +107,7 @@ trait EntityRelationsAchievements
                     $progress->points = 0;
                     $progress->created_at = null;
                     $progress->updated_at = null;
+
                     return $progress;
                 }
             );

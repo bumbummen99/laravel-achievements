@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Tests\AchievementChains;
@@ -9,9 +10,7 @@ use SkyRaptor\Tests\Achievements\FirstPost;
 use SkyRaptor\Tests\Achievements\TenPosts;
 
 /**
- * Class PostChain
- *
- * @package SkyRaptor\Tests\AchievementChains
+ * Class PostChain.
  */
 class PostChain extends AchievementChain
 {

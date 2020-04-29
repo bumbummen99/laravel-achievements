@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Achievements;
@@ -7,21 +8,22 @@ use SkyRaptor\Achievements\Contracts\CanAchieve;
 use SkyRaptor\Achievements\Model\AchievementProgress;
 
 /**
- * Class AchievementChain
- *
- * @package SkyRaptor\Achievements
+ * Class AchievementChain.
  */
 abstract class AchievementChain implements CanAchieve
 {
     /**
      * Expects an array of Achievements.
+     *
      * @return Achievement[]
      */
     abstract public function chain(): array;
 
     /**
      * For an Achiever, return the highest achievement on the chain that is unlocked.
+     *
      * @param $achiever
+     *
      * @return null|AchievementProgress
      */
     public function highestOnChain($achiever): ?AchievementProgress
@@ -36,6 +38,7 @@ abstract class AchievementChain implements CanAchieve
                 return $latestUnlocked;
             }
         }
+
         return $latestUnlocked;
     }
 

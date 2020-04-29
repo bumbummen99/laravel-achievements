@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Achievements\Model;
@@ -12,9 +13,10 @@ use Illuminate\Support\Facades\Config;
  * Model for the table that will store the details for an Achievement Progress.
  *
  * @category Model
- * @package  SkyRaptor\Achievements\Model
+ *
  * @author   Gabriel Simonetti <simonettigo@gmail.com>
  * @license  MIT License
+ *
  * @link     https://github.com/assada/laravel-achievements
  */
 class AchievementDetails extends Model
@@ -28,6 +30,7 @@ class AchievementDetails extends Model
 
     /**
      * AchievementDetails constructor.
+     *
      * @param array $attributes
      */
     public function __construct(array $attributes = [])
@@ -75,7 +78,7 @@ class AchievementDetails extends Model
      */
     public static function getUnsyncedByAchiever($achiever)
     {
-        $className = (new static)->getAchieverClassName($achiever);
+        $className = (new static())->getAchieverClassName($achiever);
 
         $achievements = AchievementProgress::where('achiever_type', $className)
             ->where('achiever_id', $achiever->id)->get();
@@ -89,7 +92,7 @@ class AchievementDetails extends Model
     }
 
     /**
-     * Gets model morph name
+     * Gets model morph name.
      *
      * @param Model $achiever
      *

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Tests\Achievements;
@@ -6,9 +7,7 @@ namespace SkyRaptor\Tests\Achievements;
 use SkyRaptor\Achievements\Achievement;
 
 /**
- * Class TenPosts
- *
- * @package SkyRaptor\Tests\Achievements
+ * Class TenPosts.
  */
 class TenPosts extends Achievement
 {

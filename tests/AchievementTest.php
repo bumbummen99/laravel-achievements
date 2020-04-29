@@ -1,19 +1,18 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Tests;
 
+use Illuminate\Database\Eloquent\Relations\Relation;
 use SkyRaptor\Achievements\Achievement;
 use SkyRaptor\Achievements\Model\AchievementDetails;
-use SkyRaptor\Tests\Model\User;
 use SkyRaptor\Tests\Achievements\FirstPost;
 use SkyRaptor\Tests\Achievements\TenPosts;
-use Illuminate\Database\Eloquent\Relations\Relation;
+use SkyRaptor\Tests\Model\User;
 
 /**
- * Class AchievementTest
- *
- * @package SkyRaptor\Tests
+ * Class AchievementTest.
  */
 class AchievementTest extends DBTestCase
 {
@@ -21,7 +20,7 @@ class AchievementTest extends DBTestCase
     public $onePost;
     public $tenPosts;
 
-    public function setUp():void
+    public function setUp(): void
     {
         parent::setUp();
         $this->users[] = User::find(1);
@@ -33,7 +32,6 @@ class AchievementTest extends DBTestCase
         $this->onePost = new FirstPost();
         $this->tenPosts = new TenPosts();
     }
-
 
     public function testUnlocked()
     {
@@ -57,7 +55,7 @@ class AchievementTest extends DBTestCase
     }
 
     /**
-     * Tests the setup
+     * Tests the setup.
      */
     public function testSetup()
     {
@@ -76,7 +74,7 @@ class AchievementTest extends DBTestCase
         // Loads the AchievementDetails Models
 
         /** @var AchievementDetails $onePostDB */
-        $onePostDB  = AchievementDetails::find(1);
+        $onePostDB = AchievementDetails::find(1);
         /** @var AchievementDetails $tenPostsDB */
         $tenPostsDB = AchievementDetails::find(2);
 
@@ -115,7 +113,7 @@ class AchievementTest extends DBTestCase
         // Third user: unlock only second achievement.
         $this->users[2]->unlock($this->tenPosts);
 
-        $onePostModel  = $this->onePost->getModel();
+        $onePostModel = $this->onePost->getModel();
         $tenPostsModel = $this->tenPosts->getModel();
 
         // Assertions via checking the database
@@ -288,7 +286,7 @@ class AchievementTest extends DBTestCase
     public function testUnlockedWithMorphMap()
     {
         Relation::morphMap([
-            'user' => User::class
+            'user' => User::class,
         ]);
 
         $user = $this->users[0];
@@ -303,7 +301,7 @@ class AchievementTest extends DBTestCase
     public function testAchieverMorphMap()
     {
         Relation::morphMap([
-            'user' => User::class
+            'user' => User::class,
         ]);
 
         $user = $this->users[0];
@@ -311,7 +309,7 @@ class AchievementTest extends DBTestCase
         $user->unlock($this->onePost);
 
         $user = $user->fresh();
-        $onePostModel  = $this->onePost->getModel();
+        $onePostModel = $this->onePost->getModel();
 
         $onePostFirstUnlocked = $onePostModel->unlocks()->first();
 
@@ -328,7 +326,7 @@ class AchievementTest extends DBTestCase
         $this->users[0]->unlock($this->onePost);
         $this->users[0]->unlock($this->tenPosts);
 
-        foreach($this->users[0]->unlockedAchievements() as $unlockedAchievement) {
+        foreach ($this->users[0]->unlockedAchievements() as $unlockedAchievement) {
             $this->assertEquals($unlockedAchievement->name, $unlockedAchievement->details->name);
             $this->assertEquals($unlockedAchievement->description, $unlockedAchievement->details->description);
         }

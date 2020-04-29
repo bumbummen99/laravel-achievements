@@ -1,14 +1,14 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Achievements\Traits;
 
 /**
- * Trait Achiever
- *
- * @package SkyRaptor\Achievements
+ * Trait Achiever.
  */
 trait Achiever
 {
-    use EntityRelationsAchievements, RoutesAchievements;
+    use EntityRelationsAchievements;
+    use RoutesAchievements;
 }

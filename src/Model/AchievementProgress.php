@@ -1,24 +1,26 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Achievements\Model;
 
 use Carbon\Carbon;
 use Exception;
-use SkyRaptor\Achievements\Achievement;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Support\Facades\Config;
 use Ramsey\Uuid\Uuid;
+use SkyRaptor\Achievements\Achievement;
 
 /**
  * Model for the table that will store the data regarding achievement progress and unlocks.
  *
  * @category Model
- * @package  SkyRaptor\Achievements\Model
+ *
  * @author   Gabriel Simonetti <simonettigo@gmail.com>
  * @license  MIT License
+ *
  * @link     https://github.com/assada/laravel-achievements
  */
 class AchievementProgress extends Model
@@ -39,6 +41,7 @@ class AchievementProgress extends Model
 
     /**
      * AchievementProgress constructor.
+     *
      * @param array $attributes
      */
     public function __construct(array $attributes = [])
@@ -96,6 +99,7 @@ class AchievementProgress extends Model
         if ($this->points >= $this->details->points) {
             return true;
         }
+
         return false;
     }
 
@@ -114,9 +118,10 @@ class AchievementProgress extends Model
      *
      * @param array $options
      *
+     * @throws Exception
+     * @throws Exception
+     *
      * @return bool
-     * @throws Exception
-     * @throws Exception
      */
     public function save(array $options = []): bool
     {
@@ -148,7 +153,7 @@ class AchievementProgress extends Model
     }
 
     /**
-     * Maps to SkyRaptor\Achievements\Achievement::$name
+     * Maps to SkyRaptor\Achievements\Achievement::$name.
      *
      * @return string
      */
@@ -158,7 +163,7 @@ class AchievementProgress extends Model
     }
 
     /**
-     * Maps to SkyRaptor\Achievements\Achievement::$description
+     * Maps to SkyRaptor\Achievements\Achievement::$description.
      *
      * @return string
      */

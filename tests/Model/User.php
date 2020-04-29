@@ -1,15 +1,14 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Tests\Model;
 
-use SkyRaptor\Achievements\Traits\Achiever;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use SkyRaptor\Achievements\Traits\Achiever;
 
 /**
- * Class User
- *
- * @package SkyRaptor\Tests\Model
+ * Class User.
  */
 class User extends Authenticatable
 {

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 use Illuminate\Database\Migrations\Migration;
@@ -7,7 +8,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
 
 /**
- * Class CreateAchievementsTables
+ * Class CreateAchievementsTables.
  */
 class CreateAchievementsTables extends Migration
 {

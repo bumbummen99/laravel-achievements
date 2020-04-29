@@ -1,26 +1,24 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Achievements\Traits;
 
-use SkyRaptor\Achievements\Contracts\CanAchieve;
-use SkyRaptor\Achievements\Model\AchievementProgress;
 use SkyRaptor\Achievements\Achievement;
 use SkyRaptor\Achievements\AchievementChain;
+use SkyRaptor\Achievements\Contracts\CanAchieve;
+use SkyRaptor\Achievements\Model\AchievementProgress;
 
 /**
- * Trait RoutesAchievements
- *
- * @package SkyRaptor\Achievements
+ * Trait RoutesAchievements.
  */
 trait RoutesAchievements
 {
-
     /**
      * Adds a specified amount of points to the achievement.
      *
      * @param CanAchieve $instance An instance of an achievement
-     * @param mixed $points The amount of points to add to the achievement's progress
+     * @param mixed      $points   The amount of points to add to the achievement's progress
      *
      * @return void
      */
@@ -33,7 +31,7 @@ trait RoutesAchievements
      * Removes a specified amount of points from the achievement.
      *
      * @param CanAchieve $instance An instance of an achievement
-     * @param mixed $points The amount of points to remove from the achievement's progress
+     * @param mixed      $points   The amount of points to remove from the achievement's progress
      *
      * @return void
      */
@@ -46,7 +44,7 @@ trait RoutesAchievements
      * Sets the current progress as the specified amount of points.
      *
      * @param CanAchieve $instance An instance of an achievement
-     * @param mixed $points The amount of points to remove from the achievement's progress
+     * @param mixed      $points   The amount of points to remove from the achievement's progress
      *
      * @return void
      */
@@ -67,9 +65,8 @@ trait RoutesAchievements
         $this->setProgress($instance, 0);
     }
 
-
     /**
-     * Unlocks an achievement
+     * Unlocks an achievement.
      *
      * @param Achievement $instance An instance of an achievement
      *
@@ -82,7 +79,9 @@ trait RoutesAchievements
 
     /**
      * Gets the highest achievement unlocked on a specific achievement chain.
+     *
      * @param AchievementChain $chain
+     *
      * @return null|AchievementProgress
      */
     public function highestOnAchievementChain(AchievementChain $chain): ?AchievementProgress

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Achievements\Console;
@@ -9,9 +10,10 @@ use Illuminate\Console\GeneratorCommand;
  * Creates an achievement class stub.
  *
  * @category Command
- * @package  SkyRaptor\Achievements\Command
+ *
  * @author   Gabriel Simonetti <simonettigo@gmail.com>
  * @license  MIT License
+ *
  * @link     https://github.com/assada/laravel-achievements
  */
 class AchievementMakeCommand extends GeneratorCommand
@@ -44,7 +46,7 @@ class AchievementMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__ . '/stubs/achievement_class.stub';
+        return __DIR__.'/stubs/achievement_class.stub';
     }
 
     /**
@@ -56,6 +58,6 @@ class AchievementMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace . '\Achievements';
+        return $rootNamespace.'\Achievements';
     }
 }

@@ -1,15 +1,14 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Achievements\Event;
 
-use SkyRaptor\Achievements\Model\AchievementProgress;
 use Illuminate\Queue\SerializesModels;
+use SkyRaptor\Achievements\Model\AchievementProgress;
 
 /**
- * Class Unlocked
- *
- * @package SkyRaptor\Achievements\Event
+ * Class Unlocked.
  */
 class Unlocked
 {

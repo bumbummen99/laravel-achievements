@@ -1,17 +1,16 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Tests;
 
 use Illuminate\Foundation\Testing\TestCase;
 use Illuminate\Support\Facades\Artisan;
-use SkyRaptor\Tests\Model\User;
 use SkyRaptor\Achievements\AchievementsServiceProvider;
+use SkyRaptor\Tests\Model\User;
 
 /**
- * Class DBTestCase
- *
- * @package SkyRaptor\Tests
+ * Class DBTestCase.
  */
 class DBTestCase extends TestCase
 {
@@ -25,6 +24,7 @@ class DBTestCase extends TestCase
         $app = require __DIR__.'/../vendor/laravel/laravel/bootstrap/app.php';
         $app->register(AchievementsServiceProvider::class);
         $app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
+
         return $app;
     }
 

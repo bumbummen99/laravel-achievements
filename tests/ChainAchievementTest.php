@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace SkyRaptor\Tests;
@@ -10,9 +11,7 @@ use SkyRaptor\Tests\Achievements\TenPosts;
 use SkyRaptor\Tests\Model\User;
 
 /**
- * Class ChainAchievementTest
- *
- * @package SkyRaptor\Tests
+ * Class ChainAchievementTest.
  */
 class ChainAchievementTest extends DBTestCase
 {
