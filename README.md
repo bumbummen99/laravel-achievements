@@ -87,7 +87,7 @@ Achievements can be unlocked by using the `Achiever` trait.
 
 namespace App;
 
-use SkyRaptor\Achievements\Achiever;
+use SkyRaptor\Achievements\Traits\Achiever;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
