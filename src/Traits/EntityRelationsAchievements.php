@@ -35,7 +35,7 @@ trait EntityRelationsAchievements
      *
      * @return null|AchievementProgress
      */
-    public function achievementStatus(Achievement $achievement) : ?AchievementProgress
+    public function achievementStatus(Achievement $achievement): ?AchievementProgress
     {
         return $this->achievements()->where('achievement_id', $achievement->getModel()->id)->first();
     }
@@ -47,7 +47,7 @@ trait EntityRelationsAchievements
      *
      * @return bool
      */
-    public function hasUnlocked(Achievement $achievement) : bool
+    public function hasUnlocked(Achievement $achievement): bool
     {
         $status = $this->achievementStatus($achievement);
 
@@ -59,7 +59,7 @@ trait EntityRelationsAchievements
      *
      * @return Collection
      */
-    public function inProgressAchievements() : Collection
+    public function inProgressAchievements(): Collection
     {
         return $this->achievements()->whereNull('unlocked_at')->where('points', '>', 0)->get();
     }
@@ -69,7 +69,7 @@ trait EntityRelationsAchievements
      *
      * @return Collection
      */
-    public function notInProgressAchievements() : Collection
+    public function notInProgressAchievements(): Collection
     {
         return $this->achievements()->whereNull('unlocked_at')->where('points', '=', 0)->get();
     }
@@ -79,7 +79,7 @@ trait EntityRelationsAchievements
      *
      * @return Collection
      */
-    public function unlockedAchievements() : Collection
+    public function unlockedAchievements(): Collection
     {
         return $this->achievements()->whereNotNull('unlocked_at')->get();
     }
@@ -89,7 +89,7 @@ trait EntityRelationsAchievements
      *
      * @return Collection
      */
-    public function lockedAchievements() : Collection
+    public function lockedAchievements(): Collection
     {
         if (config('achievements.locked_sync')) {
             // Relationships should be synced. Just return relationship data.
@@ -119,7 +119,7 @@ trait EntityRelationsAchievements
     /**
      * Syncs achievement data.
      */
-    public function syncAchievements() : void
+    public function syncAchievements(): void
     {
         /** @var Collection $locked */
         $locked = AchievementDetails::getUnsyncedByAchiever($this);
