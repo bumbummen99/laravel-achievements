@@ -112,6 +112,21 @@ class AchievementProgress extends Model
     }
 
     /**
+     * Determines the percentage to unlocking the
+     * Achievement. Return 100 for unlocked achievements.
+     *
+     * @return float
+     */
+    public function unlockPercentage() : float
+    {
+        if ($this->isUnlocked()) {
+            return 100;
+        }
+
+        return $this->points * 100 / $this->details->points;
+    }
+
+    /**
      * Overloads save method.
      *
      * @param array $options
