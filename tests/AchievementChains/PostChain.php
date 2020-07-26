@@ -19,7 +19,7 @@ class PostChain extends AchievementChain
      */
     public function chain(): array
     {
-        return [ 
+        return [
             new FirstPost(),
             new TenPosts(),
             new FiftyPosts(),

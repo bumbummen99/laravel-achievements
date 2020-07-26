@@ -117,7 +117,7 @@ class AchievementProgress extends Model
      *
      * @return float
      */
-    public function unlockPercentage() : float
+    public function unlockPercentage(): float
     {
         if ($this->isUnlocked()) {
             return 100;
