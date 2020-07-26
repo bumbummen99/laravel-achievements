@@ -100,7 +100,6 @@ class AchievementTest extends DBTestCase
      */
     public function testUnlock()
     {
-
         // First user: unlocks both achievements.
         $this->users[0]->unlock($this->onePost);
         $this->users[0]->unlock($this->tenPosts);
