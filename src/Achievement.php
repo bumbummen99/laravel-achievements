@@ -181,6 +181,21 @@ abstract class Achievement implements CanAchieve
     }
 
     /**
+     * Sets a specified amount of points to the achievement.
+     *
+     * @param mixed $achiever The entity that will add progress to this achievement
+     *
+     * @return void
+     */
+    public function lockProgressForAchiever($achiever): void
+    {
+        $progress = $this->getOrCreateProgressForAchiever($achiever);
+        $progress->points = 0;
+        $progress->unlocked_at = null;
+        $progress->save();
+    }
+
+    /**
      * Gets the achiever's progress data for this achievement, or creates a new one if not existant.
      *
      * @param Model $achiever

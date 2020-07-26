@@ -63,4 +63,15 @@ abstract class AchievementChain implements CanAchieve
             $instance->setProgressToAchiever($achiever, $points);
         }
     }
+
+    /**
+     * @param $achiever
+     */
+    public function lockProgressForAchiever($achiever): void
+    {
+        foreach ($this->chain() as $instance) {
+            /** @var Achievement $instance */
+            $instance->lockProgressForAchiever($achiever);
+        }
+    }
 }

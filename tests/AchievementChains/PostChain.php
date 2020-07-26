@@ -12,8 +12,17 @@ use SkyRaptor\Tests\Achievements\TenPosts;
  */
 class PostChain extends AchievementChain
 {
+    /**
+     * Expects an array of Achievements.
+     *
+     * @return Achievement[]
+     */
     public function chain(): array
     {
-        return [new FirstPost(), new TenPosts(), new FiftyPosts()];
+        return [ 
+            new FirstPost(),
+            new TenPosts(),
+            new FiftyPosts(),
+        ];
     }
 }

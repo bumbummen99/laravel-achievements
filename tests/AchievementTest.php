@@ -142,6 +142,23 @@ class AchievementTest extends DBTestCase
     }
 
     /**
+     * Tests unlocking achievements.
+     */
+    public function testLock()
+    {
+        // Unlocks a achievement
+        $this->users[0]->unlock($this->onePost);
+
+        $this->assertTrue($this->users[0]->hasUnlocked($this->onePost));
+
+        // Locks a achievement
+        $this->users[0]->lock($this->onePost);
+
+        // Assert
+        $this->assertFalse($this->users[0]->hasUnlocked($this->onePost));
+    }
+
+    /**
      * Test adding/removing/progressing on achievements.
      */
     public function testProgress()

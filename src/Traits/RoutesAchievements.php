@@ -64,6 +64,18 @@ trait RoutesAchievements
     }
 
     /**
+     * Locks and resets the progress of an achievement.
+     *
+     * @param Achievement $instance An instance of an achievement
+     *
+     * @return void
+     */
+    public function lock(Achievement $instance): void
+    {
+        $instance->lockProgressForAchiever($this);
+    }
+
+    /**
      * Unlocks an achievement.
      *
      * @param Achievement $instance An instance of an achievement
